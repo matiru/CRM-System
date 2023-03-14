@@ -1,0 +1,62 @@
+.header-logo{
+width: 40px;
+height: 40px;
+}
+.profile-picture{
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 20px;
+}
+.settings-logo{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.logout-logo{
+    width: 40px;
+    height: 40px;
+}
+.header{
+display: flex;
+height: 60px;
+align-items: center;
+
+}
+.logoandname{
+display: flex;
+flex: 0.20;
+border: 1px solid black;
+gap: 10%;
+align-items: center;
+padding-left: 20px;
+}
+.logoandname>h1{
+  color: #26BFDB;
+  font-family: Calisto MT;
+ 
+}
+.mid-header{
+display: flex;
+flex: 0.80;
+align-items: center;
+justify-content: space-between;
+border: #26BFDB 1px solid;
+padding-left: 20px;
+padding-right: 20px;
+}
+.signoutandsetting{
+display: flex;
+align-items: center;
+
+}
+.welcomemessage{
+display: flex;
+align-items: center;
+
+}
+
+.welcomemessage>h1{
+    color: #26BFDB;
+    font-family: Calisto MT;
+}
