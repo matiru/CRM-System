@@ -2,9 +2,8 @@
 display: flex;
 flex-direction: column;
 flex: 0.20;
-border: 1px solid black;
+
 width: 100%;
-margin-top: 20px;
 }
 
 .sidebar-content{
@@ -20,6 +19,7 @@ background-color: #F5F5F5;
 border-radius: 10px;
 padding-left:  20px;
 padding-right: 20px;
+color: #4F4747;
 }
 .sidebar-icon{
 width: 40px;
@@ -28,7 +28,7 @@ height: 40px;
 .sidebar-content>p{
     font-family: Calibri;
     font-size: 20px;
-    color: #4F4747;
+   
 
 }
 .sidebar-content:hover{

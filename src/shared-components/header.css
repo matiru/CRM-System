@@ -27,7 +27,7 @@ width: 100%;
 .logoandname{
 display: flex;
 flex: 0.20;
-border: 1px solid black;
+
 gap: 10%;
 align-items: center;
 padding-left: 20px;
@@ -42,7 +42,7 @@ display: flex;
 flex: 0.80;
 align-items: center;
 justify-content: space-between;
-border: #26BFDB 1px solid;
+
 padding-left: 20px;
 padding-right: 20px;
 }

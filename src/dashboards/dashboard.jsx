@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderComponent from '../shared-components/header'
 import Sidebar from '../shared-components/sidebar'
+import DashboardContent from './dashboard-content'
 import './dashboard.css'
 
 function Dashboard() {
@@ -11,6 +12,7 @@ function Dashboard() {
        </div>
         <div className='dashboard-content'>
         <Sidebar/>
+        <DashboardContent/>
         </div>
 
 

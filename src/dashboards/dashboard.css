@@ -2,16 +2,117 @@
 display: flex;
 height: 100vh;
 width: 100%;
+
 }
 .dashboard{
 display: flex;
 flex-direction: column;
 width: 100%;
+height: 100vh;
 }
 .dashboard-header{
 display: flex;
 flex: 0.10;
 justify-content: space-between;
 width: 100%;
-background-color: brown;
 }
+
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.80;
+    padding-left: 40px;
+    margin-top: 20px;
+
+    height: 100vh;
+  }
+  .dashboard-content-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .dashboard-item {
+    width: 200px;
+    height: 100px;
+    background-color: #eee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 20px;
+  }
+  
+  .dashboard-number {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .dashboard-percent {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .dashboard-description {
+    font-size: 0.8em;
+    margin: 0;
+  }
+  
+  .chart-container {
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .recharts-cartesian-axis-tick-value {
+    font-size: 1.2em;
+  }
+  
+  .recharts-cartesian-axis-tick-line {
+    display: none;
+  }
+  
+  .recharts-cartesian-axis > .recharts-cartesian-axis-line {
+    display: none;
+  }
+  
+  .recharts-cartesian-grid-line-vertical {
+    stroke: #ccc;
+    stroke-dasharray: 5 5;
+  }
+  
+  .recharts-bar-legend-item {
+    cursor: pointer;
+  }
+  
+  .recharts-default-tooltip {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recharts-tooltip-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .recharts-tooltip-item {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .recharts-reference-line-label {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
