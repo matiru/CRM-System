@@ -3,8 +3,10 @@ import HeaderComponent from '../shared-components/header'
 import Sidebar from '../shared-components/sidebar'
 import DashboardContent from './dashboard-content'
 import './dashboard.css'
+import { Outlet } from "react-router-dom";
 
-function Dashboard() {
+
+function DashBoard() {
   return (
     <div className='dashboard'>
          <div className='dashboard-header'>
@@ -12,7 +14,7 @@ function Dashboard() {
        </div>
         <div className='dashboard-content'>
         <Sidebar/>
-        <DashboardContent/>
+        <Outlet />
         </div>
 
 
@@ -21,4 +23,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default DashBoard

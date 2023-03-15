@@ -1,13 +1,13 @@
 .dashboard-content{
 display: flex;
 height: 100vh;
-width: 100%;
+
 
 }
 .dashboard{
 display: flex;
 flex-direction: column;
-width: 100%;
+
 height: 100vh;
 }
 .dashboard-header{
@@ -26,44 +26,104 @@ width: 100%;
     flex: 0.80;
     padding-left: 40px;
     margin-top: 20px;
-
-    height: 100vh;
+    
+    font-family: Calisto MT;
+    font-size: medium;
   }
   .dashboard-content-header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
   .dashboard-item {
     width: 200px;
-    height: 100px;
-    background-color: #eee;
-    border-radius: 5px;
+    height: fit-content;
+    background-color: #F5F5F5;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin-right: 20px;
+    justify-content:space-evenly;
+    border-radius: 10px;
+    padding-left :10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+
   }
-  
-  .dashboard-number {
-    font-size: 2em;
-    font-weight: bold;
+  .dashboard-item > *{
     margin: 0;
+    padding:0 10px;
+    font-family: Calibri;
   }
-  
-  .dashboard-percent {
-    font-size: 1.2em;
+
+  .cardcard{
+    display: flex;
+    justify-content: right;
+    position: relative;
+    text-align: right;
+    padding: 0 10px;
+  }
+  .item-ico{
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    margin-top: -25px;
+  }
+  .dashboard-hr{
+    color: #4F4747;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .spanspan
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    position: relative;
+    text-align: right;
+    gap: 10px;
+  }
+  .spanspan>*{
+   margin: 0;
+
+    font-family: Calibri;
+  }
+  .dashboard-number{
+   text-align: right;
+    font-size: 25px;
     margin: 0;
+    color: #5d556f;
   }
-  
-  .dashboard-description {
-    font-size: 0.8em;
-    margin: 0;
-  }
-  
+.dashboard-title{
+  color: #4F4747;
+  text-align: right;
+  font-size: 15px;
+}
+.dashboard-description{
+  color: #4F4747;
+  text-align: left;
+  font-size: 15px;
+}
+.spanspan2{
+  display: flex;
+  gap: 10px;
+}
+
+.spanspan2>*{
+  margin-top: 10px;
+  margin-bottom: 10px;
+ margin-left: 0;
+  margin-right:0;
+  font-family: Calibri;
+
+}
+.dashboard-percent{
+  color:green;
+}
   .chart-container {
     margin-top: 50px;
     width: 100%;
@@ -115,4 +175,3 @@ width: 100%;
     font-size: 1.2em;
     font-weight: bold;
   }
-  
