@@ -1,10 +1,19 @@
 import React from 'react'
 import HeaderComponent from '../shared-components/header'
+import Sidebar from '../shared-components/sidebar'
+import './dashboard.css'
 
 function Dashboard() {
   return (
-    <div>
+    <div className='dashboard'>
+         <div className='dashboard-header'>
         <HeaderComponent/>
+       </div>
+        <div className='dashboard-content'>
+        <Sidebar/>
+        </div>
+
+
     </div>
     
   )
