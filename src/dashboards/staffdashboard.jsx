@@ -1,19 +1,20 @@
 import React from 'react'
 import HeaderComponent from '../shared-components/header'
-import Sidebar from '../shared-components/sidebar'
 import './dashboard.css'
+import StaffSideBar from '../shared-components/staffsidebar';
+
 import { Outlet } from "react-router-dom";
 
 
-function DashBoard() {
+function StaffDashBoard() {
   return (
     <div className='dashboard'>
          <div className='dashboard-header'>
         <HeaderComponent/>
        </div>
         <div className='dashboard-content'>
-        <Sidebar/>
-        <Outlet />
+        <StaffSideBar/>
+        <Outlet /> 
         </div>
 
 
@@ -22,4 +23,4 @@ function DashBoard() {
   )
 }
 
-export default DashBoard
+export default StaffDashBoard

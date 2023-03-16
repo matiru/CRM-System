@@ -162,3 +162,58 @@ export const productsObject = [
         status: "pending"
     }
 ];
+
+export const usersObject = [
+
+  {
+    username: 'kai',
+    email: 'kai@gmail.com',
+    role: 'super Admin',
+    password: '123456'
+
+  },
+  {
+   username:'kante',
+    email:'kante@gmail.com',
+    role:'staff',
+    password:'123456'
+  },
+
+  {
+    username:'enzo',
+     email:'enzo@gmail.com',
+     role:'Admin',
+     password:'123456'
+   },
+  {
+    username: 'user1',
+    email: 'user1@example.com',
+    role: 'super Admin',
+    password: 'abcde12345'
+  },
+  {
+    username: 'user2',
+    email: 'user2@example.com',
+    role: 'Admin',
+    password: 'fghij67890'
+  },
+  {
+    username: 'user3',
+    email: 'user3@example.com',
+    role: 'staff',
+    password: 'klmno12345'
+  },
+  {
+    username: 'user4',
+    email: 'user4@example.com',
+    role: 'super Admin',
+    password: 'pqrst67890'
+  },
+  {
+    username: 'user5',
+    email: 'user5@example.com',
+    role: 'staff',
+    password: 'uvwxy12345'
+  },
+
+]

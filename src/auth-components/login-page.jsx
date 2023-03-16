@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './login-page.css'
 import logo from '../images/logo1.png'
 import { useNavigate } from 'react-router-dom';
+import { usersObject } from '../data'
 
 function LoginPage() {
 
@@ -21,15 +22,34 @@ function LoginPage() {
       }
     });
   }
-  
-  // on submit validate the data
+
   function handleOnSubmit(event) {
     event.preventDefault();
+
     if (loginData.email === '' || loginData.password === '') {
-      alert('please enter valid email and password')
-    } else {
-      navigate('/dashboard');
+      alert('please fill all fields')
+      return
     }
+    const user = usersObject.find(user => user.email === loginData.email);
+    if (user) {
+      if (user.password === loginData.password) {
+        if (user.role === 'super Admin' || user.role === 'Admin') {
+          navigate('/admin-dashboard')
+        }
+        else {
+          navigate('/staff-dashboard')
+        }
+      }
+      else {
+        alert('password is incorrect')
+      }
+    }
+
+
+    else {
+      alert('user not found')
+    }
+
   }
 
 
@@ -50,14 +70,16 @@ function LoginPage() {
             className='login-input'
             name='email'
             value={loginData.email}
-            onChange={handleOnChange} />
+            onChange={handleOnChange}
+            required />
 
           <input type='password'
             placeholder='password'
             className='login-input'
             name='password'
             value={loginData.password}
-            onChange={handleOnChange} />
+            onChange={handleOnChange}
+            required />
 
           <button className='login-btn' onClick={handleOnSubmit}>Login</button>
           <p>forgot password?</p>

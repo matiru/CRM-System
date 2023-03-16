@@ -70,5 +70,11 @@ background-color: #ffffff;
     border: none;
     cursor: pointer;
     font-family: Calibri;
-    transition: all 0.3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.login-btn:hover{
+    background-color: #4F4747;
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.1);
 }
