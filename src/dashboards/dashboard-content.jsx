@@ -67,25 +67,11 @@ function DashboardContent() {
           </span>
         </div>
 
-        <div className="dashboard-item">
-        <div className="cardcard">
-          <img className='item-ico' src={refunded}></img>
-          <span className='spanspan'>
-          <p className="dashboard-title">Amount Refunded</p>
-          <h4 className="dashboard-number">$20 </h4>
-          </span>
-          </div>
-          < hr className="dashboard-hr"/>
-          <span className='spanspan2'>
-            <p className="dashboard-percent">-10%</p>
-            <p className="dashboard-description">than yesterday</p>
-          </span>
-        </div>
       </div>
 
       <div className="chart-container">
         <h4>Sales of the week </h4>
-        <BarChart width={1120} height={400} data={data}>
+        <BarChart width={850} height={400} data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
