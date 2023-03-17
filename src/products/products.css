@@ -3,16 +3,49 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 0.75;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     margin-top: 20px;
-    font-family: Calisto MT;
-    font-size: medium;
-    border: 1px solid black;
+    font-family: Calibri;
     height: fit-content;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+.actions-img{
+   height: 15px;
+   
+}
+.product-link{
+    text-decoration: none;
+    color: black;
+    background-color:#d6eee5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .product-link>*{
+    margin: 0;
+  }
+  .product-link:focus{
+    background-color: #26BFDB;
+    cursor: pointer;
+    color: #ffffff;
+  }
+.products-header{
+    display: flex;  }
 
+  .products-div{
+  font-size: 15px;
+  margin-right: 20px;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  }
+ 
 .product-lisitng-container{
     display: flex;
     flex-direction: column;
@@ -27,13 +60,16 @@
     justify-content: flex-end;
     gap: 10px;
     align-items: center;
+  
 }
 
   table {
     border-collapse: collapse;
     margin: auto;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: #4F4747;
+    font-family: Calibri;
+
     width: 100%;
     
   }
@@ -52,12 +88,15 @@
   }
   
   tr:nth-child(odd) {
-    background-color: #F5F5F5;
+   background-color:#ffffff;
   }
   
   /* Style the table cells */
   td {
     padding: 8px;
+  }
+  .actions-row{
+    text-align: center;
   }
   
   /* Remove vertical border separators for rows */

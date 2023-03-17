@@ -1,0 +1,112 @@
+.users-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.75;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: Calibri;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.users-link{
+    text-decoration: none;
+    color: black;
+    background-color:#d6eee5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .users-link>*{
+    margin: 0;
+  }
+  .users-link:focus{
+    background-color: #26BFDB;
+    cursor: pointer;
+    color: #ffffff;
+  }
+.users-header{
+    display: flex;  }
+    
+  .users-div{
+  font-size: 15px;
+  margin-right: 20px;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  }
+
+
+  .emp-form-container {
+    background-color: #D6EEE5;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  
+  .emp-form-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .emp-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4F4747;
+    width: 200px;
+    font-family: Calisto MT;
+    font-size: 12px !important;
+  }
+  
+  .emp-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Calibri;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #4F4747;
+    box-sizing: border-box;
+    color: #4F4747;
+  }
+  
+  .emp-select {
+    border: 1px solid #4F4747;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #4F4747;
+
+  }
+  
+  .emp-button {
+    font-family: Calisto MT;
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #26BFDB;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  

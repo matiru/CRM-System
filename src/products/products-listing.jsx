@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { productsObject} from '../data';
 import "./products.css";
+import actions from '../images/actions.png';
 
 function ProductTable() {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -42,26 +43,26 @@ function ProductTable() {
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Category</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Status</th>
-                      <th>Actions</th>
+                      <th className="actions-row">ID</th>
+                      <th className="actions-row" >Name</th>
+                      <th className="actions-row">Category</th>
+                      <th className="actions-row">Price</th>
+                      <th className="actions-row">Quantity</th>
+                      <th className="actions-row">Status</th>
+                      <th className="actions-row">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filteredProducts.map((product, index) => (
                       <tr key={product.id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                        <td>{product.id}</td>
-                        <td>{product.name}</td>
-                        <td>{product.category}</td>
-                        <td>${product.price}</td>
-                        <td>{product.quantity}</td>
-                        <td>{product.status}</td>
-                        <td>
-                          <button className="btn btn-sm btn-primary" onClick={() => handleEditClick(product)}>Edit</button>
+                        <td className="actions-row">{product.id}</td>
+                        <td className="actions-row" >{product.name}</td>
+                        <td className="actions-row">{product.category}</td>
+                        <td className="actions-row">${product.price}</td>
+                        <td className="actions-row">{product.quantity}</td>
+                        <td className="actions-row">{product.status}</td>
+                        <td className='actions-row'>
+                          <img className="actions-img"src={actions} onClick={() => handleEditClick(product)}></img>
                         </td>
                       </tr>
                     ))}

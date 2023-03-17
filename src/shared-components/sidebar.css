@@ -4,6 +4,7 @@ flex-direction: column;
 flex: 0.25;
 }
 
+
 .sidebar-content{
 display: flex;
 width: 80%;
@@ -24,13 +25,17 @@ height: 40px;
     font-family: Calibri;
     font-size: 20px;
 }
-.sidebar-link:focus{
+.sidebar-link.active {
+    color: white;
+    background-color: #26BFDB;
+  }
+/* .sidebar-link:focus{
     background-color: #26BFDB;
     cursor: pointer;
     color: #ffffff;
 
 
-}
+} */
 .sidebar-content:hover{
     background-color: #26BFDB;
     cursor: pointer;

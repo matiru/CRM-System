@@ -6,6 +6,9 @@ import Products from "./products/products";
 import ProductTable from "./products/products-listing";
 import AdminDashBoard from "./dashboards/adminDashBoard";
 import StaffDashBoard from "./dashboards/staffdashboard";
+import Users from "./users/users";
+import CreateStaff from "./users/create-staff";
+import CreateCustomer from "./users/create-customer";
 function App() {
   return (
     <>
@@ -14,27 +17,37 @@ function App() {
           <Route path={"/"} element={<LoginPage />} />
 
           <Route path="/admin-dashboard" element={<AdminDashBoard />}>
-            <Route index path="dashboard" element={<DashboardContent />} />
-            <Route path="" element={<DashboardContent />} />
+            <Route path="dashboard" element={<DashboardContent />} />
 
             <Route path="reports" />
 
             <Route path="products" element={<Products />}>
-              <Route index path="products-table" element={<ProductTable />} />
+              <Route index path="" element={<ProductTable />} />
               <Route path="" element={<ProductTable />} />
+              <Route path="addproduct" />
             </Route>
 
-            <Route path="users" />
+            <Route path="users" element={<Users/>} >
+
+              <Route index path="users-table"/>
+              <Route path="users-table" />
+              <Route path="addcustomer" element= {<CreateCustomer/>} />
+              <Route path="addemployee" element={<CreateStaff/>} />
+            </Route>
+
+
+
+
             <Route path="sales" />
             <Route path="settings" />
           </Route>
 
-          <Route path="/staff-dashboard" element={<StaffDashBoard/>}>
-            <Route index path="dashboard" element={<DashboardContent />} />
-            <Route path="" element={<DashboardContent />} />
+          <Route path="/staff-dashboard" element={<StaffDashBoard />}>
+            <Route path="dashboard" element={<DashboardContent />} />
             <Route path="products" element={<Products />}>
-              <Route index path="products-table" element={<ProductTable />} />
+              <Route index path="" element={<ProductTable />} />
               <Route path="" element={<ProductTable />} />
+              <Route path="addproduct" />
             </Route>
             <Route path="customers" />
             <Route path="sales" />

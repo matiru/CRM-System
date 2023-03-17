@@ -7,14 +7,10 @@ function Products() {
   return (
     <div className='products-container'>
 
-        <div className='products-header'>
-            
-        
-        <span><Link to="products-table" className="product-link">products</Link></span>
-        
-        <span><Link to="addproduct" className="product-link">+add product </Link></span>
+        <div className='products-header'>  
+        <div className='products-div'><Link to="" className="product-link"><p>products</p></Link></div> 
+        <div className='products-div'> <Link to="addproduct" className="product-link"><p>+add product</p></Link></div>
         </div>
-
         <div className='products-content'>
         <Outlet /> 
         </div>

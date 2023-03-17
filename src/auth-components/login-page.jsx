@@ -34,10 +34,10 @@ function LoginPage() {
     if (user) {
       if (user.password === loginData.password) {
         if (user.role === 'super Admin' || user.role === 'Admin') {
-          navigate('/admin-dashboard')
+          navigate('/admin-dashboard/dashboard')
         }
         else {
-          navigate('/staff-dashboard')
+          navigate('/staff-dashboard/dashboard')
         }
       }
       else {
