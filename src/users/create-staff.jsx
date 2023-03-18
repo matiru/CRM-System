@@ -5,25 +5,30 @@ const genderOptions = ["Male", "Female"];
 const roleOptions = ["Admin", "Staff"];
 const defaultPassword = "user@2023";
 
-export default function CreateStaff() {
+ function CreateStaff() {
 
+  const [users, setUsers] = useState(usersObject);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [gender, setGender] = useState(genderOptions[0]);
   const [role, setRole] = useState(roleOptions[0]);
-  const id =  useState(usersObject.length + 1);
+  const id = users.length + 1;
 
-  const [users, setUsers] = useState(usersObject);
+ 
 
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log(users);
     const newUser = { name, email, phone, gender, role, password: defaultPassword ,id};
+    console.log(newUser);
     if (users.find(user => user.email === newUser.email)) {
       alert('user already exists')
     } else {
-      setUsers((prevUsers) => [...prevUsers, newUser]); 
+      console.log(newUser, 'new user');
+      setUsers((users) => [...users, newUser]); 
+      console.log(users);
     alert('user created')
     // clear form
     setName('')
@@ -32,7 +37,6 @@ export default function CreateStaff() {
     setGender(genderOptions[0])
     setRole(roleOptions[0])
     }
-    console.log(users);
   };
 
   return (
@@ -113,3 +117,4 @@ export default function CreateStaff() {
     </div>
   );
 }
+export default CreateStaff;

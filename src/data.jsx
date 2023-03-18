@@ -164,56 +164,93 @@ export const productsObject = [
 ];
 
 export const usersObject = [
-
   {
-    username: 'kai',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'Kai Jones',
     email: 'kai@gmail.com',
-    role: 'super Admin',
+    gender: 'male',
+    numberOfSalesMade: 0,
+    dateHired: '2021-01-01',
+    status: 'active',
+    role: 'superAdmin',
     password: '123456'
-
   },
   {
-   username:'kante',
-    email:'kante@gmail.com',
-    role:'staff',
-    password:'123456'
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'Kante Silva',
+    email: 'kante@gmail.com',
+    gender: 'male',
+    numberOfSalesMade: 0,
+    dateHired: '2021-01-01',
+    status: 'active',
+    role: 'staff',
+    password: '123456'
   },
-
   {
-    username:'enzo',
-     email:'enzo@gmail.com',
-     role:'Admin',
-     password:'123456'
-   },
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'Enzo Costa',
+    email: 'enzo@gmail.com',
+    gender: 'male',
+    numberOfSalesMade: 0,
+    dateHired: '2021-01-01',
+    status: 'active',
+    role: 'admin',
+    password: '123456'
+  },
   {
-    username: 'user1',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'User One',
     email: 'user1@example.com',
-    role: 'super Admin',
+    role: 'superAdmin',
     password: 'abcde12345'
   },
   {
-    username: 'user2',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'User Two',
     email: 'user2@example.com',
-    role: 'Admin',
+    role: 'admin',
     password: 'fghij67890'
   },
   {
-    username: 'user3',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'User Three',
     email: 'user3@example.com',
     role: 'staff',
     password: 'klmno12345'
   },
   {
-    username: 'user4',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'User Four',
     email: 'user4@example.com',
-    role: 'super Admin',
+    role: 'superAdmin',
     password: 'pqrst67890'
   },
   {
-    username: 'user5',
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'User Five',
     email: 'user5@example.com',
     role: 'staff',
     password: 'uvwxy12345'
   },
-
-]
+  {
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'John Smith',
+    email: 'john.smith@example.com',
+    gender: 'male',
+    lastPurchaseDate: '2022-03-16',
+    loyaltyPoints: 100,
+    numberOfPurchasesMade: 5,
+    role: 'customer',
+    password: 'password123'
+  },
+  {
+    id: Math.random().toString(36).substr(2, 9),
+    name: 'Emma Watson',
+    email: 'emma.watson@example.com',
+    gender: 'female',
+    lastPurchaseDate: '2022-02-28',
+    loyaltyPoints: 50,
+    numberOfPurchasesMade: 3,
+    role: 'customer',
+    password: 'password123'
+  }];

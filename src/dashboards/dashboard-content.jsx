@@ -67,12 +67,13 @@ function DashboardContent() {
           </span>
         </div>
 
+
       </div>
 
       <div className="chart-container">
         <h4>Sales of the week </h4>
-        <BarChart width={850} height={400} data={data}>
-          <CartesianGrid strokeDasharray="3 3" />
+        <BarChart width={980} height={400} data={data}>
+          <CartesianGrid strokeDasharray="1 1" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />

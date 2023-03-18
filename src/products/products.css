@@ -104,3 +104,84 @@
     border-right: none;
   }
   
+  .product-form-container {
+    background-color: #D6EEE5;
+    padding: 20px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  
+  .product-form-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4F4747;
+    width: 200px;
+    font-family: Calisto MT;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  }
+  
+  .product-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Calibri;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #4F4747;
+    box-sizing: border-box;
+    color: #4F4747;
+  }
+  
+  .product-select {
+    border: 1px solid #4F4747;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #4F4747;
+  }
+  
+  .product-button {
+    font-family: Calisto MT;
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #26BFDB;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+  .pro-modal {
+  background-color: #F5F5F5;
+  padding: 5px;
+  width: 60%;
+  margin:  auto;
+  border-radius: 10px;
+  }
+  
+  .pro-modal>*{
+    margin: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+  }

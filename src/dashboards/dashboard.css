@@ -14,7 +14,7 @@ height: 100vh;
 display: flex;
 flex: 0.10;
 justify-content: space-between;
-width: 100%;
+
 }
 
 
@@ -126,7 +126,6 @@ width: 100%;
 }
   .chart-container {
     margin-top: 50px;
-    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }

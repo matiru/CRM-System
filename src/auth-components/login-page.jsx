@@ -33,7 +33,7 @@ function LoginPage() {
     const user = usersObject.find(user => user.email === loginData.email);
     if (user) {
       if (user.password === loginData.password) {
-        if (user.role === 'super Admin' || user.role === 'Admin') {
+        if (user.role === 'superAdmin' || user.role === 'admin') {
           navigate('/admin-dashboard/dashboard')
         }
         else {

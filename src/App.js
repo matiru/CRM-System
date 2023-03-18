@@ -9,6 +9,8 @@ import StaffDashBoard from "./dashboards/staffdashboard";
 import Users from "./users/users";
 import CreateStaff from "./users/create-staff";
 import CreateCustomer from "./users/create-customer";
+import UserTable from "./users/users-table";
+import ProductForm from "./products/add-product";
 function App() {
   return (
     <>
@@ -24,13 +26,13 @@ function App() {
             <Route path="products" element={<Products />}>
               <Route index path="" element={<ProductTable />} />
               <Route path="" element={<ProductTable />} />
-              <Route path="addproduct" />
+              <Route path="addproduct"  element ={<ProductForm/>}/>
             </Route>
 
             <Route path="users" element={<Users/>} >
 
-              <Route index path="users-table"/>
-              <Route path="users-table" />
+              <Route index element={<UserTable/>}/>
+              <Route path=""element={<UserTable/>} />
               <Route path="addcustomer" element= {<CreateCustomer/>} />
               <Route path="addemployee" element={<CreateStaff/>} />
             </Route>
@@ -47,7 +49,7 @@ function App() {
             <Route path="products" element={<Products />}>
               <Route index path="" element={<ProductTable />} />
               <Route path="" element={<ProductTable />} />
-              <Route path="addproduct" />
+              <Route path="addproduct" e />
             </Route>
             <Route path="customers" />
             <Route path="sales" />

@@ -2,21 +2,37 @@ import React, { useState } from 'react';
 import { productsObject} from '../data';
 import "./products.css";
 import actions from '../images/actions.png';
+import Modal from 'react-modal';
+import EditProductDialog from './edit-product';
 
 function ProductTable() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [filterText, setFilterText] = useState('');
   const [products, setProducts] = useState(productsObject);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
 
   const handleEditClick = (product) => {
     setSelectedProduct(product);
+    setModalIsOpen(true);
   };
-
+  
   const handleSaveClick = (updatedProduct) => {
-    // TODO: Update the product in the database and then update the local state with the updated product
-    setSelectedProduct(null);
-  };
+    // Update the product in the database here
+  
+    // Update the local state with the updated product
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === updatedProduct.id ? updatedProduct : product
+      )
+    );
 
+    alert("Product updated successfully");
+    // Close the modal
+    setModalIsOpen(false);
+
+  
+  };
   const handleCancelClick = () => {
     setSelectedProduct(null);
   };
@@ -62,7 +78,9 @@ function ProductTable() {
                         <td className="actions-row">{product.quantity}</td>
                         <td className="actions-row">{product.status}</td>
                         <td className='actions-row'>
-                          <img className="actions-img"src={actions} onClick={() => handleEditClick(product)}></img>
+                          <button className="actions-btn" onClick={() => handleEditClick(product)}>
+                          <img className="actions-img"src={actions} ></img>
+                          </button>
                         </td>
                       </tr>
                     ))}
@@ -71,13 +89,18 @@ function ProductTable() {
               
             
         
-      {/* {selectedProduct && (
-        <EditProductDialog
-          product={selectedProduct}
-          onSave={handleSaveClick}
-          onCancel={handleCancelClick}
-        />
-      )} */}
+                <Modal className="pro-modal"
+      isOpen={modalIsOpen}
+      onRequestClose={() => setModalIsOpen(false)}
+      contentLabel="Edit Product Modal"
+    >
+      <h1 onClick={()=> setModalIsOpen(false)}>X</h1>
+      <EditProductDialog
+        product={selectedProduct}
+        onSave={handleSaveClick}
+        onCancel={() => setModalIsOpen(false)}
+      />
+    </Modal>
     </div>
   );
 }

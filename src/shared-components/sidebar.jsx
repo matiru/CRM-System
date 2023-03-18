@@ -43,6 +43,7 @@ function Sidebar() {
           <p>Reports</p>
         </NavLink>
       </div>
+      
     </div>
   );
 }
