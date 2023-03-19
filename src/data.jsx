@@ -1,3 +1,159 @@
+export const salesObject= [
+    {
+      id: 1,
+      items: [
+        {
+          id: 1,
+          productName: 'Product A',
+          status: 'Complete',
+          price: 10,
+          quantity: 2
+        },
+        {
+          id: 2,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        } ,{
+          id: 4,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        }, {
+          id: 6,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        },
+        {
+          id: 2,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        }
+      ],
+      employee: {
+        id: 1,
+        name: 'John Doe'
+      },
+      customer: {
+        id: 1,
+        name: 'Jane Smith'
+      },
+      totalAmount: 25
+    },
+
+    
+    {
+      id: 2,
+      items: [
+        {
+          id: 3,
+          productName: 'Product C',
+          status: 'Complete',
+          price: 15,
+          quantity: 3
+        },
+        {
+          id: 4,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        } ,{
+          id: 5,
+          productName: 'Product A',
+          status: 'Complete',
+          price: 10,
+          quantity: 1
+        }
+      ],
+      employee: {
+        id: 2,
+        name: 'Sarah Johnson'
+      },
+      customer: {
+        id: 2,
+        name: 'Robert Brown'
+      },
+      totalAmount: 35
+    },
+    {
+      id: 3,
+      items: [
+        {
+          id: 6,
+          productName: 'Product B',
+          status: 'Complete',
+          price: 5,
+          quantity: 2
+        },
+        {
+          id: 7,
+          productName: 'Product A',
+          status: 'Complete',
+          price: 10,
+          quantity: 1
+        } ,{
+          id: 8,
+          productName: 'Product C',
+          status: 'Complete',
+          price: 15,
+          quantity: 1
+        }
+      ],
+      employee: {
+        id: 3,
+        name: 'Mark Johnson'
+      },
+      customer: {
+        id: 3,
+        name: 'Karen Davis'
+      },
+      totalAmount: 35
+    },
+    {
+      id: 4,
+      items: [
+        {
+          id: 9,
+          productName: 'Product C',
+          status: 'Complete',
+          price: 15,
+          quantity: 3
+        },
+        {
+          id: 10,
+          productName: 'Product B',
+          status: 'Refunded',
+          price: 5,
+          quantity: 1
+        } ,{
+          id: 11,
+          productName: 'Product A',
+          status: 'Complete',
+          price: 10,
+          quantity: 1
+        }
+      ],
+      employee: {
+        id: 2,
+        name: 'Sarah Johnson'
+      },
+      customer: {
+        id: 4,
+        name: 'Chris Wilson'
+      },
+      totalAmount: 45
+    }
+  
+];
+
+
 export const productsObject = [
     { 
       id: 1, 

@@ -11,6 +11,9 @@ import CreateStaff from "./users/create-staff";
 import CreateCustomer from "./users/create-customer";
 import UserTable from "./users/users-table";
 import ProductForm from "./products/add-product";
+import Sales from "./sales/sales-page";
+import MakeSale from "./sales/make-sale";
+import SalesTable from "./sales/sales-table";
 function App() {
   return (
     <>
@@ -40,8 +43,14 @@ function App() {
 
 
 
-            <Route path="sales" />
+            <Route path="sales" element = {<Sales/>}  >
+              <Route index path="" element={<SalesTable/>} />
+              <Route path=""element={<SalesTable/>} />
+              <Route path="addsale" element ={<MakeSale/>}/>
+
+            </Route>
             <Route path="settings" />
+
           </Route>
 
           <Route path="/staff-dashboard" element={<StaffDashBoard />}>

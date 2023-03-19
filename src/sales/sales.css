@@ -1,0 +1,212 @@
+.sales-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.75;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: Calibri;
+    height: fit-content;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.sales-link{
+    text-decoration: none;
+    color: black;
+    background-color:#d6eee5;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .sales-link>*{
+    margin: 0;
+  }
+  .sales-link:focus{
+    background-color: #26BFDB;
+    cursor: pointer;
+    color: #ffffff;
+  }
+.sales-header{
+    display: flex;  }
+    
+  .sales-div{
+  font-size: 15px;
+  margin-right: 20px;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  }
+
+
+  .crm-container {
+    background-color: #F5F5F5;
+    padding: 20px;
+    font-family: Calibri;
+    }
+    
+    h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Calisto MT;
+    }
+    
+    .make-sale-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    .make-sale-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    }
+    
+   .make-sale-input {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    }
+    
+    button[type="submit"] {
+    background-color: #26BFDB;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    }
+    
+    .sales-container {
+    margin-top: 20px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    
+    h2 {
+    color: #333;
+    margin-bottom: 20px;
+
+    }
+    
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    }
+    
+    thead {
+
+    color: #26BFDB;
+    }
+    
+    th,
+    td {
+    padding: 10px;
+    text-align: left;
+    }
+    
+    th:first-child,
+    td:first-child {
+    width: 20%;
+    }
+    
+    th:nth-child(2),
+    td:nth-child(2) {
+    width: 20%;
+    }
+    
+    th:nth-child(3),
+    td:nth-child(3) {
+    width: 20%;
+    }
+    
+    th:nth-child(4),
+    td:nth-child(4) {
+    width: 10%;
+    }
+    
+    th:nth-child(5),
+    td:nth-child(5) {
+    width: 20%;
+    }
+    
+    button {
+    background-color: #26BFDB;
+    color: #FFF;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    }
+    
+    .total-cost-container {
+    text-align: right;
+    margin-top: 20px;
+    }
+    
+    h3 {
+    color: #333;
+    }
+
+
+    .sales-table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      
+      .sales-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+      }
+      
+      .sales-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      
+      .sales-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      
+      .sales-table .refunded {
+        background-color: #ffdddd;
+      }
+      
+      .sales-lisitng-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0.75;
+        padding: 20px;
+        margin-top: 20px;
+        font-family: Calibri;
+        height: fit-content;
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .sales-searchandselect{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
