@@ -32,17 +32,8 @@ function LoginPage() {
     }
     const user = usersObject.find(user => user.email === loginData.email);
     if (user) {
-      if (user.password === loginData.password) {
-        if (user.role === 'superAdmin' || user.role === 'admin') {
-          navigate('/admin-dashboard/dashboard')
-        }
-        else {
-          navigate('/staff-dashboard/dashboard')
-        }
-      }
-      else {
-        alert('password is incorrect')
-      }
+     
+      navigate('/dashboard')
     }
 
 

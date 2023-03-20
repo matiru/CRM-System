@@ -5,7 +5,7 @@ import settings from '../images/settings-icon.jpg'
 import logout from '../images/logout.jpg'
 import "./header.css"
 import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 function HeaderComponent() {
@@ -33,9 +33,9 @@ function HeaderComponent() {
         <h1>Hello Matiru</h1>
         </div>
         <div className='signoutandsetting'>
-        <Link to="settings" className="sidebar-link">
+        <NavLink to="profile" className="sidebar-link">
         <img className='settings-logo' src={settings}></img>
-        </Link>
+        </NavLink>
         <img className="logout-logo"  onClick={handleSignout} src={logout}></img>
         </div>
         </div>

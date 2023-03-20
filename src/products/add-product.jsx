@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import "./products.css";
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../redux/slices/productsSlice';
+import { useSelector } from 'react-redux';
+
 
 function ProductForm() {
+
+  const dispatch = useDispatch();
+  
+  const products = useSelector(state => state.products);
+
+  console.log(products);
+
   const [product, setProduct] = useState({
     name: "",
     category: "",
@@ -9,6 +20,8 @@ function ProductForm() {
     quantity: "",
     status: "",
     description: "",
+    id : 0
+
   });
 
   const handleInputChange = (event) => {
@@ -21,8 +34,26 @@ function ProductForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(product);
+    const id = Math.floor(Math.random() * 1000) + 1;
+    const newProduct = {
+      ...product,
+      id: id,
+    };
+    dispatch(addProduct(newProduct));
+    alert("Product added successfully");
+    // clear the form
+    setProduct({
+      name: "",
+      category: "",
+      price: "",
+      quantity: "",
+      status: "",
+      description: "",
+      id : 0
+    });
+
   };
+  
 
   return (
     <div className="product-form-container">
@@ -99,7 +130,7 @@ function ProductForm() {
             className="product-input"
           />
         </div>
-        <button type="submit" className="product-button">
+        <button onClick={handleSubmit} type="submit" className="product-button">
           Register
         </button>
       </form>

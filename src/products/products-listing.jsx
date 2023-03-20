@@ -5,6 +5,7 @@ import actions from '../images/actions.png';
 import Modal from 'react-modal';
 import EditProductDialog from './edit-product';
 
+
 function ProductTable() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [filterText, setFilterText] = useState('');

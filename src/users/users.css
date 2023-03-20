@@ -164,12 +164,14 @@ td:not(:last-child) {
 
 .user-select{
   height: 30px;
-  width: 180px;
+  width: 200px;
   border-radius: 10px;
 }
 .user-search{
-  height: 30px;
+  height: 30px !important;
+  width: 200px !important;
   border-radius: 10px;
+
 }
 .user-searchandselect{
   display: flex;
