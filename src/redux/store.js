@@ -1,18 +1,21 @@
 import { configureStore } from '@reduxjs/toolkit';
-import productsSlice from './slices/productsSlice';
-import userstateSlice from './slices/userstateSlice';
-import usersSlice from './slices/usersSlice';
-import cartSlice from './slices/cartSlice';
-import salesSlice from './slices/salesSlice';
+import { combineReducers } from 'redux'; // import combineReducers
+import productsReducer from './slices/productsSlice';
+import userstateReducer from './slices/userstateSlice';
+import usersReducer from './slices/usersSlice';
+import cartReducer from './slices/cartSlice';
+import salesReducer from './slices/salesSlice';
+
+const rootReducer = combineReducers({
+  products: productsReducer,
+  userstate: userstateReducer,
+  users: usersReducer,
+  cart: cartReducer,
+  sales: salesReducer,
+});
 
 const store = configureStore({
-    reducer: {
-      reducer: productsSlice,
-      reducer: userstateSlice,
-      reducer:usersSlice,
-      reducer:cartSlice,
-      reducer: salesSlice,
-},
-})
+  reducer: rootReducer,
+});
 
-export default store
+export default store;
