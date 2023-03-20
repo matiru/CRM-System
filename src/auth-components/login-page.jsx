@@ -33,7 +33,7 @@ function LoginPage() {
     const user = usersObject.find(user => user.email === loginData.email);
     if (user) {
      
-      navigate('/dashboard')
+      navigate('/dashboard/dashboard')
     }
 
 
