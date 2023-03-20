@@ -8,52 +8,47 @@ import { useSelector } from 'react-redux';
 function ProductForm() {
 
   const dispatch = useDispatch();
-  
-  const products = useSelector(state => state.products);
-
-  console.log(products);
-
+   const products = useSelector((state) => state.products)
+// i want to get the last id of the products array and add 1 to it to get the new id
+// then set details of the new product and new id to theto the redux store
   const [product, setProduct] = useState({
+    id: 0,
     name: "",
     category: "",
     price: "",
     quantity: "",
-    status: "",
-    description: "",
-    id : 0
-
+    status: "active",
   });
 
-  const handleInputChange = (event) => {
+  function handleInputChange(event) {
     const { name, value } = event.target;
-    setProduct((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+    setProduct((prevProduct) => {
+      return {
+        ...prevProduct,
+        [name]: value,
+      };
+    });
 
-  const handleSubmit = (event) => {
+  }
+
+  // make a function to add the product to the  redux store then clear the form it should be async such that it 
+  // waits for the product to be added to the store before clearing the form
+
+  function handleSubmit(event) {
     event.preventDefault();
-    const id = Math.floor(Math.random() * 1000) + 1;
-    const newProduct = {
-      ...product,
-      id: id,
-    };
-    dispatch(addProduct(newProduct));
-    alert("Product added successfully");
-    // clear the form
+    dispatch(addProduct(product));
     setProduct({
+      id: 0,
       name: "",
       category: "",
       price: "",
       quantity: "",
-      status: "",
-      description: "",
-      id : 0
+      status: "active",
     });
+    console.log(products);
+  }
 
-  };
-  
+
 
   return (
     <div className="product-form-container">
