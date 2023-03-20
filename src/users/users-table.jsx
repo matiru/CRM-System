@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { usersObject} from '../data';
 import "./users.css";
+import { useSelector } from "react-redux";
 
 import actions from '../images/actions.png';
 
 const UserTable = () => {
-  const [users, setUsers] = useState(usersObject);
-  const [selectedUserType, setSelectedUserType] = useState('admin');
+  const users = useSelector((state) => state.users.users);
+  console.log(users);
+ 
+  
+
+  const [selectedUserType, setSelectedUserType] = useState('Admin')
+  
   const [searchText, setSearchText] = useState('');
   
   // Filter users based on selected user type
@@ -27,16 +32,16 @@ const UserTable = () => {
   <div className="user-lisitng-container">
     <div className='user-searchandselect'>
       <select className='user-select' value={selectedUserType} onChange={e => setSelectedUserType(e.target.value)}>
-        <option value="admin">Admin</option>
-        <option value="staff">Staff</option>
-        <option value="customer">Customer</option>
+        <option value="Admin">Admin</option>
+        <option value="Staff">Staff</option>
+        <option value="Customer">Customer</option>
       </select>
       <input className ='user-search'type="text" placeholder="Search" value={searchText} onChange={e => setSearchText(e.target.value)} />
       </div>
       <table>
         <thead>
           
-          {selectedUserType === 'admin' || selectedUserType === 'staff' ? (
+          {selectedUserType === 'Admin' || selectedUserType ==='Staff' || selectedUserType === 'super Admin'? (
             <tr>
               <th>ID</th>
               <th>Name</th>
@@ -60,8 +65,8 @@ const UserTable = () => {
         </thead>
         <tbody>
           {searchedUsers.map(user => (
-            <tr key={user.id}>
-              {selectedUserType === 'admin' || selectedUserType === 'staff' ? (
+            <tr  key={user.index}>
+              {selectedUserType === 'Admin' || selectedUserType === 'Staff' ? (
                 <>
                   <td>{user.id}</td>
                   <td>{user.name}</td>
@@ -70,6 +75,11 @@ const UserTable = () => {
                   <td>{user.salesMade}</td>
                   <td>{user.dateHired}</td>
                   <td>{user.status}</td>
+
+
+
+
+
                 </>
               ) : (
                 <>
