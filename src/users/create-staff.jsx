@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./users.css";
-import { usersObject } from '../data'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addUser } from "../redux/slices/usersSlice";
+
 const genderOptions = ["Male", "Female"];
 const roleOptions = ["Admin", "Staff"];
 const defaultPassword = "user@2023";
 
- function CreateStaff() {
-
-  const [users, setUsers] = useState(usersObject);
+function CreateStaff() {
+  const users = useSelector((state) => state.users.users);
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,27 +18,33 @@ const defaultPassword = "user@2023";
   const [role, setRole] = useState(roleOptions[0]);
   const id = users.length + 1;
 
- 
-
-
   const handleFormSubmit = (event) => {
     event.preventDefault();
     console.log(users);
-    const newUser = { name, email, phone, gender, role, password: defaultPassword ,id};
+    const newUser = {
+      name,
+      email,
+      phone,
+      gender,
+      role,
+      password: defaultPassword,
+      id,
+      datehired: new Date().toLocaleDateString(),
+    };
     console.log(newUser);
-    if (users.find(user => user.email === newUser.email)) {
-      alert('user already exists')
+    if (users.find((user) => user.email === newUser.email)) {
+      alert("user already exist");
     } else {
-      console.log(newUser, 'new user');
-      setUsers((users) => [...users, newUser]); 
+      console.log(newUser, "new user");
+      dispatch(addUser(newUser));
       console.log(users);
-    alert('user created')
-    // clear form
-    setName('')
-    setEmail('')
-    setPhone('')
-    setGender(genderOptions[0])
-    setRole(roleOptions[0])
+      alert("user created");
+      // clear form
+      setName("");
+      setEmail("");
+      setPhone("");
+      setGender(genderOptions[0]);
+      setRole(roleOptions[0]);
     }
   };
 
@@ -43,8 +52,11 @@ const defaultPassword = "user@2023";
     <div className="emp-form-container">
       <form onSubmit={handleFormSubmit}>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="name">NAME:</label>
-          <input className="emp-input"
+          <label className="emp-label" htmlFor="name">
+            NAME:
+          </label>
+          <input
+            className="emp-input"
             type="text"
             id="name"
             value={name}
@@ -53,8 +65,11 @@ const defaultPassword = "user@2023";
           />
         </div>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="email">EMAIL:</label>
-          <input className="emp-input"
+          <label className="emp-label" htmlFor="email">
+            EMAIL:
+          </label>
+          <input
+            className="emp-input"
             type="email"
             id="email"
             value={email}
@@ -63,8 +78,11 @@ const defaultPassword = "user@2023";
           />
         </div>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="phone">PHONE:</label>
-          <input className="emp-input"
+          <label className="emp-label" htmlFor="phone">
+            PHONE:
+          </label>
+          <input
+            className="emp-input"
             type="tel"
             id="phone"
             value={phone}
@@ -73,8 +91,11 @@ const defaultPassword = "user@2023";
           />
         </div>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="gender">GENDER:</label>
-         <select className="emp-select"
+          <label className="emp-label" htmlFor="gender">
+            GENDER:
+          </label>
+          <select
+            className="emp-select"
             id="gender"
             value={gender}
             onChange={(event) => setGender(event.target.value)}
@@ -88,8 +109,11 @@ const defaultPassword = "user@2023";
           </select>
         </div>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="role">ROLE:</label>
-         <select className="emp-select"
+          <label className="emp-label" htmlFor="role">
+            ROLE:
+          </label>
+          <select
+            className="emp-select"
             id="role"
             value={role}
             onChange={(event) => setRole(event.target.value)}
@@ -103,16 +127,21 @@ const defaultPassword = "user@2023";
           </select>
         </div>
         <div className="emp-form-group">
-          <label className="emp-label" htmlFor="default-password">DEFAULT<br></br><br></br>PASSWORD:</label>
-          <input className="emp-input"
+          <label className="emp-label" htmlFor="default-password">
+            DEFAULT<br></br>
+            <br></br>PASSWORD:
+          </label>
+          <input
+            className="emp-input"
             type="text"
             id="default-password"
             value={defaultPassword}
             readOnly
-            
           />
         </div>
-        <button className ="emp-button"type="submit">register</button>
+        <button className="emp-button" type="submit">
+          register
+        </button>
       </form>
     </div>
   );

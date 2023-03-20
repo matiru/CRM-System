@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import "./users.css";
-import { usersObject } from '../data'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addUser } from "../redux/slices/usersSlice";
 
 const genderOptions = ["Male", "Female"];
-const roleOptions = ["customer"];
+const roleOptions = ["Customer"];
 const defaultPassword = "user@2023";
 
 
 export default function CreateCustomer() {
+  const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [gender, setGender] = useState(genderOptions[0]);
   const [role, setRole] = useState(roleOptions[0]);
-  const id =  useState(usersObject.length + 1);
+  const users = useSelector((state) => state.users.users);
+  const id =  users.length + 1;
   
-  const [users, setUsers] = useState(usersObject);
+ 
 
 const handleFormSubmit = (event) => {
   event.preventDefault();
@@ -23,7 +27,9 @@ const handleFormSubmit = (event) => {
   if (users.find(user => user.email === newUser.email)) {
     alert('user already exists')
   } else {
-    setUsers((prevUsers) => [...prevUsers, newUser]); 
+   
+  dispatch(addUser(newUser))
+
   alert('user created')
   // clear form
   setName('')
