@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={<LoginPage />} />
 
-          <Route path="/admin-dashboard" element={<AdminDashBoard />}>
+          <Route path="/dashboard" element={<AdminDashBoard />}>
             <Route path="dashboard" element={<DashboardContent />} />
 
             <Route path="reports" element={<Reports/>} >
