@@ -17,7 +17,7 @@ function ProductForm() {
     category: "",
     price: "",
     quantity: "",
-    status: "",
+    status: "pending",
   });
 
   function handleInputChange(event) {
@@ -37,13 +37,14 @@ function ProductForm() {
   function handleSubmit(event) {
     event.preventDefault();
     dispatch(addProduct(product));
+    alert('product added')
     setProduct({
       id: 0,
       name: "",
       category: "",
       price: "",
       quantity: "",
-      status: "active",
+      status: "pending",
     });
     console.log(products);
   }
