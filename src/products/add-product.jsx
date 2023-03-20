@@ -17,7 +17,7 @@ function ProductForm() {
     category: "",
     price: "",
     quantity: "",
-    status: "active",
+    status: "",
   });
 
   function handleInputChange(event) {

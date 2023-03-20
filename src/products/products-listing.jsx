@@ -4,12 +4,21 @@ import "./products.css";
 import actions from '../images/actions.png';
 import Modal from 'react-modal';
 import EditProductDialog from './edit-product';
+import { useSelector } from 'react-redux';
+
 
 
 function ProductTable() {
+  const products = useSelector((state) => state.products.products)
+  
+  
+
+
+
+
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [filterText, setFilterText] = useState('');
-  const [products, setProducts] = useState(productsObject);
+  
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
 
@@ -21,12 +30,12 @@ function ProductTable() {
   const handleSaveClick = (updatedProduct) => {
     // Update the product in the database here
   
-    // Update the local state with the updated product
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === updatedProduct.id ? updatedProduct : product
-      )
-    );
+    // // Update the local state with the updated product
+    // setProducts((prevProducts) =>
+    //   prevProducts.map((product) =>
+    //     product.id === updatedProduct.id ? updatedProduct : product
+    //   )
+    // );
 
     alert("Product updated successfully");
     // Close the modal
